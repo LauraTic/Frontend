@@ -1,1 +1,30 @@
-<p>identificacion works!</p>
+<div class="container">
+    <section id="seccion-contacto"class="border-bottom border-secondary border-2">     
+     
+        <div
+          class="container border-top border-primary"
+          style="max-width: 500px"
+          id="contenedor-formulario"
+        >
+          <div class="text-center mb-4" id="titulo-formulario">
+
+            <h2>Ingresa</h2>
+            <p class="fs-5">Estamos aquí para hacer realidad tus proyectos</p>
+          </div>
+          <form [formGroup]="fgValidador" (ngSubmit)="identificarUsuario()">
+            <div class="mb-3">
+              <label for="txtEmail" class="form-label">Correo</label>
+              <input formControlName="usuario" type="email" class="form-control" id="txtEmail" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text"></div>
+            </div>
+            <div class="mb-3">
+              <label for="txtClave" class="form-label">Contraseña</label>
+              <input formControlName="clave" type="password" class="form-control" id="txtClave">
+            </div>              
+            <button [disabled]="!fgValidador.valid" type="submit" class="btn btn-primary" >Entrar</button>
+            <!--<button [disabled]="!fgValidador.valid" type="button" (click)="identificarUsuario()" class="btn btn-primary" >Entrar</button>-->
+          </form>
+        </div>
+      </section>
+
+</div>
