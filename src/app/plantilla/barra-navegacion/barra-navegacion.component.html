@@ -3,17 +3,19 @@
         <a routerLink="/inicio" class="brand-logo">Logo</a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-            <li><a routerLink="/administracion/mascotas">Sass</a></li>
-            <li><a routerLink="/administracion/productos">Components</a></li>
-            <li><a routerLink="/seguridad/identificar">Identificar</a></li>
-            <li><a routerLink="/seguridad/cambio-clave">Cambio clave</a></li>
+            <li *ngIf="seInicioSesion"><a routerLink="/administracion/mascota">Mascota</a></li>
+            <li *ngIf="seInicioSesion"><a routerLink="/administracion/productos">Components</a></li>
+            <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/identificar">Identificar</a></li>
+            <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cambio-clave">Cambio clave</a></li>
+            <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrar-sesion">Cerrar sesion</a></li>
         </ul>
     </div>
 </nav>
 
 <ul class="sidenav" id="mobile-demo">
-    <li><a routerLink="/administracion/mascotas">Sass</a></li>
-    <li><a routerLink="/administracion/productos">Components</a></li>
-    <li><a routerLink="/seguridad/identificar">Identificar</a></li>
-    <li><a routerLink="/seguridad/cambio-clave">Cambio clave</a></li>
+    <li *ngIf="seInicioSesion"><a routerLink="/administracion/mascota">Mascota</a></li>
+    <li *ngIf="seInicioSesion"><a routerLink="/administracion/productos">Components</a></li>
+    <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/identificar">Identificar</a></li>
+    <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cambio-clave">Cambio clave</a></li>
+    <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrar-sesion">Cerrar sesion</a></li>
 </ul>
