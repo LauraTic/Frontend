@@ -17,6 +17,9 @@ export class SeguridadService {
     this.VerficiarSesionActual();
    }
 
+
+   //METODOS PARA IDENTIFICAR EL USUARIO
+
   VerficiarSesionActual(){
     let datos = this.ObtenerInformacionSesion();
     if(datos){
@@ -71,4 +74,20 @@ export class SeguridadService {
   ObtenerDatosUsuarioEnSesion(){
     return this.datosUsuariosEnSesion.asObservable();
   }
+
+
+  // METODOS PARA TOKEN
+
+  ObtenerToken(){
+    let datosString = localStorage.getItem("datosSesion");
+    if(datosString){
+      let datos = JSON.parse(datosString);
+      return datos.tk;
+    }else{
+      return '';
+    }
+  }
+
+
+
 }
