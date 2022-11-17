@@ -1,10 +1,10 @@
 <div class="container">
-    <form [formGroup]="fgValidador" class="row g-3 needs-validation" novalidate>
+    <form [formGroup]="fgValidador" (ngSubmit)="GuardarProducto()" class="row g-3 needs-validation" novalidate>
 
         <div class="col-md-6">
             <label for="txtTipo" class="form-label">Tipo</label>
             <input formControlName="tipo" type="text" class="form-control" id="txtTipo" required>
-            <div class="invalid-feedback">
+            <div>
               Ingrese el tipo
             </div>
           </div>
@@ -12,21 +12,21 @@
         <div class="col-md-6">
           <label for="txtNombre" class="form-label">Nombres</label>
           <input formControlName="nombre" type="text" class="form-control" id="txtNombre" required>
-          <div class="invalid-feedback">
+          <div>
             Ingrese un nombre
           </div>
         </div>
         <div class="col-md-6">
           <label for="txtDescripcion" class="form-label">Descripcion</label>
           <input formControlName="descripcion" type="text" class="form-control" id="txtDescripcion" required>
-          <div class="invalid-feedback">
+          <div>
             Ingrese un descripcion
           </div>
         </div>
         <div class="col-md-4">
             <label for="txtPrecio" class="form-label">Precio</label>
             <input formControlName="precio" type="text" class="form-control" id="txtPrecio" required>
-            <div class="invalid-feedback">
+            <div>
               Ingrese el precio
             </div>
         </div>
@@ -34,7 +34,7 @@
                     
                               
         <div class="col-12">
-          <button [disabled]="!fgValidador.valid" class="btn btn-primary" type="submit">Registrar</button>
+          <button  class="btn btn-primary" type="submit">Registrar</button>
         </div>
       </form>
 </div>

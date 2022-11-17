@@ -29,7 +29,7 @@ export class CrearProductoServicioComponent implements OnInit {
     let tipo = this.fgValidador.controls["tipo"].value;
     let nombre = this.fgValidador.controls["nombre"].value;
     let descripcion = this.fgValidador.controls["descripcion"].value;
-    let precio = this.fgValidador.controls["precio"].value;
+    let precio = parseInt(this.fgValidador.controls["precio"].value);
     let p = new ModeloProducto();
     p.tipo = tipo;
     p.nombre = nombre;
