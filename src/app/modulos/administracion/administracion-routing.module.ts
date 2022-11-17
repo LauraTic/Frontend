@@ -30,7 +30,7 @@ const routes: Routes = [
     component:CrearProductoServicioComponent
   },
   {
-    path:"editar-producto-servicio/:id",
+    path:'editar-producto-servicio/:id',
     component:EditarProductoServicioComponent
   },
   {

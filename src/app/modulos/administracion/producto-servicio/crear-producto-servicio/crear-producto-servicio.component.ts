@@ -14,7 +14,7 @@ export class CrearProductoServicioComponent implements OnInit {
   fgValidador: FormGroup = this.fb.group({
     'tipo':['',[Validators.required]],
     'nombre':['',[Validators.required]],
-    'decripcion':['',[Validators.required]],
+    'descripcion':['',[Validators.required]],
     'precio':['',[Validators.required]]
   });
 
