@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { AdministracionRoutingModule } from './administracion-routing.module';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { ProductoServicioComponent } from './producto-servicio/producto-servicio.component';
