@@ -26,7 +26,7 @@ export class ProductoService {
       headers: new HttpHeaders({
         'Authorization':`Bearer ${this.token}` 
       })
-    });
+    })
 
 
   }
@@ -37,7 +37,7 @@ export class ProductoService {
       headers: new HttpHeaders({
         'Authorization':`Bearer ${this.token}` 
       })
-    });
+    })
 
 
   }
@@ -48,7 +48,7 @@ export class ProductoService {
       headers: new HttpHeaders({
         'Authorization':`Bearer ${this.token}` 
       })
-    });
+    })
 
 
   }
