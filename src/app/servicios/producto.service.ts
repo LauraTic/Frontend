@@ -20,6 +20,12 @@ export class ProductoService {
     return this.http.get<ModeloProducto[]>(`${this.url}/productos-servicios`);
 
   }
+
+  ObtenerProductosId(id: string): Observable<ModeloProducto>{
+    return this.http.get<ModeloProducto>(`${this.url}/productos-servicios/${id}`);
+
+  }
+
   CrearProductos(producto:ModeloProducto): Observable<ModeloProducto>{
 
     return this.http.post<ModeloProducto>(`${this.url}/productos-servicios`, producto, {
@@ -33,7 +39,7 @@ export class ProductoService {
 
   ActualizarProductos(producto:ModeloProducto): Observable<ModeloProducto>{
 
-    return this.http.put<ModeloProducto>(`${this.url}/productos-servicios`, producto, {
+    return this.http.put<ModeloProducto>(`${this.url}/productos-servicios/${producto.id}`, producto, {
       headers: new HttpHeaders({
         'Authorization':`Bearer ${this.token}` 
       })

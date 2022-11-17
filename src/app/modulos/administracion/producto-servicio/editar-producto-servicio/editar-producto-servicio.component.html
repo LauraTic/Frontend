@@ -1,1 +1,44 @@
-<p>editar-producto-servicio works!</p>
+<div class="container">
+    <h3 class="center-align">  Editar producto Servicio</h3>
+    <form [formGroup]="fgValidador" (ngSubmit)="EditarProducto()" class="row g-3 needs-validation" novalidate>
+        <input type="hidden" formControlName="id" />
+        <div class="col-md-6">
+            <label for="txtTipo" class="active">Tipo</label>
+            <input formControlName="tipo" type="text" class="form-control" id="txtTipo" required>
+            <div>
+              Ingrese el tipo
+            </div>
+          </div>
+
+        <div class="col-md-6">
+          <label for="txtNombre" class="active">Nombres</label>
+          <input formControlName="nombre" type="text" class="form-control" id="txtNombre" required>
+          <div>
+            Ingrese un nombre
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="txtDescripcion" class="active">Descripcion</label>
+          <input formControlName="descripcion" type="text" class="form-control" id="txtDescripcion" required>
+          <div>
+            Ingrese un descripcion
+          </div>
+        </div>
+        <div class="col-md-4">
+            <label for="txtPrecio" class="active">Precio</label>
+            <input formControlName="precio" type="text" class="form-control" id="txtPrecio" required>
+            <div>
+              Ingrese el precio
+            </div>
+        </div>
+        
+                    
+                              
+        <div class="col-12">
+          <button [disabled]="!fgValidador.valid" class="btn btn-primary" type="submit">Registrar</button>
+        </div>
+      </form>
+</div>
+
+
+
