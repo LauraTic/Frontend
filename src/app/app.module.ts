@@ -9,13 +9,15 @@ import { InicioComponent } from './plantilla/inicio/inicio.component';
 import { ErrorComponent } from './plantilla/error/error.component';
 import {HttpClientModule} from '@angular/common/http';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     BarraNavegacionComponent,
     PiePaginaComponent,
     InicioComponent,
-    ErrorComponent
+    ErrorComponent,
+    
   ],
   imports: [
     BrowserModule,

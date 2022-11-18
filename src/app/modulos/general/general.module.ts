@@ -7,13 +7,13 @@ import { ProductoServicioComponent } from './producto-servicio/producto-servicio
 import { PlanesComponent } from './planes/planes.component';
 import { HomeComponent } from './home/home.component';
 
-
 @NgModule({
   declarations: [
     ContactanosComponent,
     ProductoServicioComponent,
     PlanesComponent,
-    HomeComponent
+    HomeComponent,
+    
   ],
   imports: [
     CommonModule,

@@ -1,1 +1,48 @@
-<p>crear-usuario works!</p>
+<div class="container">
+    <form [formGroup]="fgValidador" (ngSubmit)="GuardarUsuario();" class="row g-3 needs-validation" novalidate>
+
+        <div class="col-md-6">
+            <label for="tipo" class="form-label">Cédula</label>
+            <input formControlName="cedula" type="text" class="form-control" id="cedula" required>
+            
+        </div>
+
+        <div class="col-md-6">
+            <label for="nombre" class="form-label">Nombres</label>
+            <input formControlName="nombre" type="text" class="form-control" id="nombre" required>
+            
+        </div>
+        <div class="col-md-6">
+            <label for="apellido" class="form-label">Apellido</label>
+            <input formControlName="apellido" type="text" class="form-control" id="apellido" required>
+            
+        </div>
+        <div class="col-md-6">
+            <label for="telefono" class="form-label">Teléfono</label>
+            <input formControlName="telefono" type="text" class="form-control" id="telefono" required>
+            
+        </div>
+        <div class="col-md-6">
+            <label for="correo" class="form-label">Correo</label>
+            <input formControlName="correo" type="text" class="form-control" id="correo" required>
+           
+        </div>
+        <div class="mb-3">
+            <label for="clave" class="form-label">Contraseña</label>
+            <input formControlName="clave" type="password" class="form-control" id="clave">
+        </div>
+        <div class="col-md-4">
+            <label for="rol" class="form-label">Rol</label>
+            <input formControlName="rol" type="text" class="form-control" id="rol" required>
+            <div>
+                Campo requerido
+            </div>
+        </div>
+
+
+
+        <div class="col-12">
+            <button [disabled]="!fgValidador.valid" class="btn btn-primary" type="submit">Registrar</button>
+        </div>
+    </form>
+</div>
