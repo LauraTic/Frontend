@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ValidadorSesionGuard } from 'src/app/guardianes/validador-sesion.guard';
 import { ModeloUsuario } from 'src/app/modelos/usuario.modelo';
 import { BuscarMascotaComponent } from './mascota/buscar-mascota/buscar-mascota.component';
 import { CrearMascotaComponent } from './mascota/crear-mascota/crear-mascota.component';
@@ -18,50 +19,61 @@ const routes: Routes = [
   //EMPIEZAN LOS LLAMADOS A MASCOTAS
   {
     path:"crear-mascota",
-    component:CrearMascotaComponent
+    component:CrearMascotaComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path:"buscar-mascota",
-    component:BuscarMascotaComponent
+    component:BuscarMascotaComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path:"editar-mascota",
-    component:EditarMascotaComponent
+    component:EditarMascotaComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path:"eliminar-mascota",
-    component:EliminarMascotaComponent
+    component:EliminarMascotaComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   //EMPIEZA PRODUCTO SERVICIO
   {
     path:"crear-producto-servicio",
-    component:CrearProductoServicioComponent
+    component:CrearProductoServicioComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path:'editar-producto-servicio/:id',
-    component:EditarProductoServicioComponent
+    component:EditarProductoServicioComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path:"listar-producto-servicio",
-    component: BuscarProductoServicioComponent
+    component: BuscarProductoServicioComponent,
+    canActivate: [ValidadorSesionGuard]
   },
 
   //EMPIEZA USUARIOS
   {
     path:"crear-usuario",
-    component:CrearUsuarioComponent
+    component:CrearUsuarioComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path:"editar-usuario/:id",
-    component:EditarUsuarioComponent
+    component:EditarUsuarioComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path:"listar-usuario",
-    component:BuscarUsuarioComponent
+    component:BuscarUsuarioComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path:"eliminar-usuario/:id",
-    component:EliminarUsuarioComponent
+    component:EliminarUsuarioComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   //EMPIEZA PROSPECTOS
   {
