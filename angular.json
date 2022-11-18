@@ -28,7 +28,8 @@
             ],
             "scripts": [
               "node_modules/materialize-css/dist/js/materialize.min.js",
-              "src/assets/js/inicio-M.js"
+              "src/assets/js/inicio-M.js",
+              "src/assets/js/funcion.js"
             ]
           },
           "configurations": {
