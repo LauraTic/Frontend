@@ -8,6 +8,7 @@ import { EliminarMascotaComponent } from './mascota/eliminar-mascota/eliminar-ma
 import { BuscarProductoServicioComponent } from './producto-servicio/buscar-producto-servicio/buscar-producto-servicio.component';
 import { CrearProductoServicioComponent } from './producto-servicio/crear-producto-servicio/crear-producto-servicio.component';
 import { EditarProductoServicioComponent } from './producto-servicio/editar-producto-servicio/editar-producto-servicio.component';
+import { CrearProspectoComponent } from './prospecto/crear-prospecto/crear-prospecto.component';
 import { BuscarUsuarioComponent } from './usuario/buscar-usuario/buscar-usuario.component';
 import { CrearUsuarioComponent } from './usuario/crear-usuario/crear-usuario.component';
 import { EditarUsuarioComponent } from './usuario/editar-usuario/editar-usuario.component';
@@ -61,6 +62,11 @@ const routes: Routes = [
   {
     path:"eliminar-usuario/:id",
     component:EliminarUsuarioComponent
+  },
+  //EMPIEZA PROSPECTOS
+  {
+    path:"crear-prospecto",
+    component:CrearProspectoComponent
   }
 ];
 

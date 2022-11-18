@@ -27,6 +27,9 @@ import { EditarUsuarioComponent } from './usuario/editar-usuario/editar-usuario.
 import { EliminarUsuarioComponent } from './usuario/eliminar-usuario/eliminar-usuario.component';
 import { BuscarUsuarioComponent } from './usuario/buscar-usuario/buscar-usuario.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProspectoComponent } from './prospecto/prospecto.component';
+import { CrearProspectoComponent } from './prospecto/crear-prospecto/crear-prospecto.component';
+import { BuscarProspectoComponent } from './prospecto/buscar-prospecto/buscar-prospecto.component';
 
 
 @NgModule({
@@ -55,7 +58,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CrearUsuarioComponent,
     EditarUsuarioComponent,
     EliminarUsuarioComponent,
-    BuscarUsuarioComponent
+    BuscarUsuarioComponent,
+    ProspectoComponent,
+    CrearProspectoComponent,
+    BuscarProspectoComponent
   ],
   imports: [
     CommonModule,

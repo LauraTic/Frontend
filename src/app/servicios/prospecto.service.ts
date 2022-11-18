@@ -7,7 +7,7 @@ import { ModeloProspecto } from '../modelos/prospecto.modelo';
   providedIn: 'root'
 })
 export class ProspectoService {
-  url='http://localhost:3000';
+  url='http://127.0.0.1:3000';
   token:string='';
 
   constructor(private http:HttpClient) { }
@@ -17,12 +17,12 @@ export class ProspectoService {
 
   }
   ObtenerProspectoId(id: string): Observable<ModeloProspecto>{
-    return this.http.get<ModeloProspecto>(`${this.url}/prospecto/${id}`);
+    return this.http.get<ModeloProspecto>(`${this.url}/prospectos/${id}`);
 
   }
 
   CrearProspecto(prospecto:ModeloProspecto): Observable<ModeloProspecto>{
-    return this.http.post<ModeloProspecto>(`${this.url}/prospecto`, prospecto, {
+    return this.http.post<ModeloProspecto>(`${this.url}/prospectos`, prospecto, {
       headers: new HttpHeaders({
         'Authorization':`Bearer ${this.token}` 
       })
