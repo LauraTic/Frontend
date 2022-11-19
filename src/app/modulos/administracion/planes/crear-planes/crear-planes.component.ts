@@ -34,7 +34,7 @@ export class CrearPlanesComponent implements OnInit {
     p.descripcion=descripcion;
     this.servicioPlanes.CrearPlanes(p).subscribe((datos: ModeloPlanes)=>{
       alert("Plan creado correctamente");
-    this.router.navigate(["/administecion/buscar-planes"])
+    this.router.navigate(["/administracion/buscar-planes"])
     },(error: any)=>{alert("Error creando plan");
   })
   }
