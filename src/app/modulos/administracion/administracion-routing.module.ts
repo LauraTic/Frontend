@@ -106,7 +106,11 @@ const routes: Routes = [
   {
     path:"crear-prospecto",
     component:CrearProspectoComponent
-  }
+  },
+ 
+
+
+
 ];
 
 @NgModule({
