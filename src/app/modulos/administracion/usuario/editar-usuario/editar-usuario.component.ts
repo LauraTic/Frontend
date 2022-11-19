@@ -9,6 +9,7 @@ import { UsuarioService } from 'src/app/servicios/usuario.service';
   templateUrl: './editar-usuario.component.html',
   styleUrls: ['./editar-usuario.component.css']
 })
+
 export class EditarUsuarioComponent implements OnInit {
   id: string = '';
   fgValidador: FormGroup = this.fb.group({
@@ -73,15 +74,6 @@ export class EditarUsuarioComponent implements OnInit {
 
   }
 
-  EliminarUsuario(){
-    
-    this.servicioUsuario.EliminarUsuario(this.id).subscribe((datos) => {
-      alert("Usuario eliminado correctamente chimba");
-      this.router.navigate(["/administracion/listar-usuario"]);
-    }, (error) => {
-      alert("Error al eliminar")
-    })
-
-  }
+ 
   
 }
