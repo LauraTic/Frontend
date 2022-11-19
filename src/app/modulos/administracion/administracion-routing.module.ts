@@ -50,20 +50,16 @@ const routes: Routes = [
     canActivate: [ValidadorSesionGuard]
   },
   {
-    path:"buscar-mascota",
+    path:"listar-mascota",
     component:BuscarMascotaComponent,
     canActivate: [ValidadorSesionGuard]
   },
   {
-    path:"editar-mascota",
+    path:"editar-mascota/:id",
     component:EditarMascotaComponent,
     canActivate: [ValidadorSesionGuard]
   },
-  {
-    path:"eliminar-mascota",
-    component:EliminarMascotaComponent,
-    canActivate: [ValidadorSesionGuard]
-  },
+
   //EMPIEZA PRODUCTO SERVICIO
   {
     path:"crear-producto-servicio",

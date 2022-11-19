@@ -38,7 +38,6 @@ export class MascotasService {
       })
     })
 
-
   }
   
   EliminarMascota(id:string): Observable<any>{
@@ -48,7 +47,6 @@ export class MascotasService {
         'Authorization':`Bearer ${this.token}` 
       })
     })
-
 
   }
  
