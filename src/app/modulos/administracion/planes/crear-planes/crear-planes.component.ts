@@ -36,6 +36,7 @@ export class CrearPlanesComponent implements OnInit {
       alert("Plan creado correctamente");
     this.router.navigate(["/administracion/buscar-planes"])
     },(error: any)=>{alert("Error creando plan");
+    
   })
   }
 }

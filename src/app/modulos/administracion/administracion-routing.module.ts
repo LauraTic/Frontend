@@ -38,7 +38,7 @@ const routes: Routes = [
     canActivate: [ValidadorSesionGuard]
   },
   {
-    path:"eliminar-planes",
+    path:"eliminar-planes/:id",
     component:EliminarPlanesComponent,
     canActivate: [ValidadorSesionGuard]
   },

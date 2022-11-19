@@ -31,7 +31,7 @@ export class PlanesService {
       })
     })
   }
-  ActualizarPlanes(planes:ModeloPlanes): Observable<ModeloPlanes>{
+  EditarPlanes(planes:ModeloPlanes): Observable<ModeloPlanes>{
     return this.http.put<ModeloPlanes>(`${this.url}/planes/${planes.id}`, planes, {
       headers: new HttpHeaders({
         'Authorization':`Bearer ${this.token}` 

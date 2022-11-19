@@ -25,9 +25,11 @@
                 {{p.precio}}
             </td>
             <td>
-                <a routerLink="/administracion/editar-planes/{{p.id}}"></a>
+                <a routerLink="/administracion/editar-planes/{{p.id}}" class="btn">Editar</a>
             </td>           
-
+            <td>
+                <a routerLink="/administracion/eliminar-planes/{{p.id}}" class="btn">Eliminar</a>
+            </td>  
         </tr>
     </tbody>
 </table>
