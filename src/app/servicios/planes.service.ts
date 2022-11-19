@@ -1,6 +1,6 @@
+import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Token } from '@angular/compiler';
-import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { ModeloProducto } from '../modelos/producto.modelo';
 import { SeguridadService } from './seguridad.service';
@@ -8,7 +8,7 @@ import { SeguridadService } from './seguridad.service';
 @Injectable({
   providedIn: 'root'
 })
-export class ProductoService {
+export class PlanesService {
   url='http://127.0.0.1:3000';
   token:string='';
 
@@ -16,7 +16,7 @@ export class ProductoService {
     this.token=this.seguridadServicio.ObtenerToken();
    }
 
-  ObtenerProductos(): Observable<ModeloPlanes[]>{
+  ObtenerProductos(): Observable<ModeloProducto[]>{
     return this.http.get<ModeloProducto[]>(`${this.url}/productos-servicios`);
 
   }
@@ -58,5 +58,4 @@ export class ProductoService {
 
 
   }
-  
 }
