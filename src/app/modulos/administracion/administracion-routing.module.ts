@@ -28,17 +28,17 @@ const routes: Routes = [
     canActivate: [ValidadorSesionGuard]
   },
   {
-    path:"buscar-plan",
+    path:"buscar-planes",
     component:BuscarPlanesComponent,
     canActivate: [ValidadorSesionGuard]
   },
   {
-    path:"editar-plan",
+    path:"editar-planes/:id",
     component:EditarPlanesComponent,
     canActivate: [ValidadorSesionGuard]
   },
   {
-    path:"eliminar-plan",
+    path:"eliminar-planes",
     component:EliminarPlanesComponent,
     canActivate: [ValidadorSesionGuard]
   },
