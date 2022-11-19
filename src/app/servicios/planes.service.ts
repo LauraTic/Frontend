@@ -31,7 +31,6 @@ export class PlanesService {
       })
     })
   }
-
   ActualizarPlanes(planes:ModeloPlanes): Observable<ModeloPlanes>{
     return this.http.put<ModeloPlanes>(`${this.url}/planes/${planes.id}`, planes, {
       headers: new HttpHeaders({
@@ -39,7 +38,6 @@ export class PlanesService {
       })
     })
   }
-
   EliminarPlanes(id:string): Observable<any>{
     return this.http.delete(`${this.url}/planes/${id}`, {
       headers: new HttpHeaders({
