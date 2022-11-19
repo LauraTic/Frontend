@@ -6,6 +6,10 @@ import { BuscarMascotaComponent } from './mascota/buscar-mascota/buscar-mascota.
 import { CrearMascotaComponent } from './mascota/crear-mascota/crear-mascota.component';
 import { EditarMascotaComponent } from './mascota/editar-mascota/editar-mascota.component';
 import { EliminarMascotaComponent } from './mascota/eliminar-mascota/eliminar-mascota.component';
+import { BuscarPlanesComponent } from './planes/buscar-planes/buscar-planes.component';
+import { CrearPlanesComponent } from './planes/crear-planes/crear-planes.component';
+import { EditarPlanesComponent } from './planes/editar-planes/editar-planes.component';
+import { EliminarPlanesComponent } from './planes/eliminar-planes/eliminar-planes.component';
 import { BuscarProductoServicioComponent } from './producto-servicio/buscar-producto-servicio/buscar-producto-servicio.component';
 import { CrearProductoServicioComponent } from './producto-servicio/crear-producto-servicio/crear-producto-servicio.component';
 import { EditarProductoServicioComponent } from './producto-servicio/editar-producto-servicio/editar-producto-servicio.component';
@@ -16,6 +20,29 @@ import { EditarUsuarioComponent } from './usuario/editar-usuario/editar-usuario.
 import { EliminarUsuarioComponent } from './usuario/eliminar-usuario/eliminar-usuario.component';
 
 const routes: Routes = [
+
+  //EMPIEZAN LOS LLAMADOS A PLANES
+  {
+    path:"crear-planes",
+    component:CrearPlanesComponent,
+    canActivate: [ValidadorSesionGuard]
+  },
+  {
+    path:"buscar-plan",
+    component:BuscarPlanesComponent,
+    canActivate: [ValidadorSesionGuard]
+  },
+  {
+    path:"editar-plan",
+    component:EditarPlanesComponent,
+    canActivate: [ValidadorSesionGuard]
+  },
+  {
+    path:"eliminar-plan",
+    component:EliminarPlanesComponent,
+    canActivate: [ValidadorSesionGuard]
+  },
+
   //EMPIEZAN LOS LLAMADOS A MASCOTAS
   {
     path:"crear-mascota",
