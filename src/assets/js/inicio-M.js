@@ -4,3 +4,11 @@ document.addEventListener('DOMContentLoaded', function() {
         
     });
   });
+
+//Método para que funcione el select del Estado (Pendiente, rechazado, aceptado)en el html de Mascotas. 
+
+function IniciarSelect(estado_array){
+  var elems = document.querySelector ('#' + estado_array);
+  var instances = M.FormSelect.init(elems, {});
+
+}

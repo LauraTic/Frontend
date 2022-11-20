@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ModeloMascotas } from 'src/app/modelos/mascotas.modelo';
+import { MascotasService } from 'src/app/servicios/mascotas.service';
 
 @Component({
   selector: 'app-eliminar-mascota',
@@ -7,9 +10,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EliminarMascotaComponent implements OnInit {
 
-  constructor() { }
+  id: string = '';
+  nombre: string = '';
+
+  constructor(
+    private servicioMascota: MascotasService,
+    private router: Router,
+    private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.id = this.route.snapshot.params["id"];
+    this.BuscarMascota();
+  }
+
+  BuscarMascota() {    
+    this.servicioMascota.ObtenerMascotasId(this.id).subscribe((datos: ModeloMascotas) => {
+      
+      if (datos.id && datos.nombre) {
+        this.id = datos.id;
+        this.nombre = datos.nombre;
+      }
+    })
+  }
+
+  EliminarMascota(){
+    this.servicioMascota.ObtenerMascotasId(this.id).subscribe((datos: any) => {
+      alert("Plan eliminado correctamente chimba");
+      this.router.navigate(["/administracion/listar-mascota"]);
+    }, (error: any) => {
+      alert("Error al eliminar")
+    })
   }
 
 }

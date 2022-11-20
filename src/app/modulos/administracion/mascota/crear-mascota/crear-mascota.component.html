@@ -1,38 +1,47 @@
-<div class="container">
-    <form [formGroup]="fgValidador" (ngSubmit)="GuardarMascota();" class="row g-3 needs-validation" novalidate>
+<div class="row">
+    <form [formGroup]="fgValidador" (ngSubmit)="GuardarMascota();" class="col s12" novalidate>
+        <div class="row">
+            <div class="input-field col s6">
+                <label for="nombre" class="form-label">Nombres</label>
+                <input formControlName="nombre" type="text" class="form-control" id="nombre" required>
+            </div>            
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                <label for="foto" class="form-label">Foto</label>
+                <input formControlName="foto" type="text" class="form-control" id="foto" required>
+            </div>           
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                <label for="especie" class="form-label">Especie</label>
+                <input formControlName="especie" type="text" class="form-control" id="especie" required>
+            </div>
+        </div>
+<!-- ESTE ES EL SELECT-->
+        <div class="input-field col s6">
+                <select id="estado_array" >                    
+                    <option *ngFor = "let c of estado_array" value="{{c}}" >{{c}}</option>
+                </select>
+                
+            <label>Estado</label>
+        </div>
+<!-- HASTA AQUÍ-->
 
-        <div class="col-md-6">
-            <label for="nombre" class="form-label">Nombres</label>
-            <input formControlName="nombre" type="text" class="form-control" id="nombre" required>
-            
-        </div>
-        <div class="col-md-6">
-            <label for="foto" class="form-label">Foto</label>
-            <input formControlName="foto" type="text" class="form-control" id="foto" required>
-            
-        </div>
-        <div class="col-md-6">
-            <label for="especie" class="form-label">Especie</label>
-            <input formControlName="especie" type="text" class="form-control" id="especie" required>
-           
-        </div>
 
-        <div class="col-md-6">
-            <label for="estado" class="form-label">Estado</label>
-            <input formControlName="estado" type="text" class="form-control" id="estado" required>
-            
-        </div>
 
-        <div class="col-md-4">
-            <label for="comentario" class="form-label">Comentario</label>
-            <input formControlName="comentario" type="text" class="form-control" id="comentario" required>
-            <div>
-                Campo requerido
+        <div class="row">
+            <div class="input-field col s12">
+                <label for="comentario" class="form-label">Comentario</label>
+                <input formControlName="comentario" type="text" class="form-control" id="comentario" required>
+                <div>
+                    Campo requerido
+                </div>
             </div>
         </div>
 
-        <div class="col-12">
-            <button [disabled]="!fgValidador.valid" class="btn btn-primary" type="submit">Registrar</button>
+        <div class="col-4">
+            <button class="btn btn-primary" type="submit">Registrar</button>
         </div>
     </form>
 </div>
