@@ -4,13 +4,15 @@ import { Router } from '@angular/router';
 import { ModeloMascotas } from 'src/app/modelos/mascotas.modelo';
 import { MascotasService } from 'src/app/servicios/mascotas.service';
 
-
+declare const IniciarSelect:any;
 @Component({
   selector: 'app-crear-mascota',
   templateUrl: './crear-mascota.component.html',
   styleUrls: ['./crear-mascota.component.css']
 })
 export class CrearMascotaComponent implements OnInit {
+
+  estado_array:string[]=["Pendiente","Aceptada","Rechazada"];
 
   fgValidador: FormGroup = this.fb.group({    
     
@@ -27,7 +29,18 @@ export class CrearMascotaComponent implements OnInit {
     private router:Router) { }
 
   ngOnInit(): void {
+    this.ObtenerSelect();
   }
+
+  ObtenerSelect(){
+    setTimeout(() => {
+      IniciarSelect("estado_array");
+
+    }, 100)
+    
+  }
+
+  
   GuardarMascota(){  
     let nombre = this.fgValidador.controls["nombre"].value;
     let foto = this.fgValidador.controls["foto"].value;
@@ -50,5 +63,7 @@ export class CrearMascotaComponent implements OnInit {
       alert("Error almacenado el usuario");
     })
   }
+
+ 
 
 }
