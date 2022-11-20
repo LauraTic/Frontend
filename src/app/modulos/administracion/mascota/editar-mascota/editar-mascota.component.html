@@ -13,11 +13,29 @@
             <input formControlName="foto" type="text" class="form-control" id="foto" required>
 
         </div>
-        <div class="col-md-6">
-            <label for="estado" class="form-label">Estado</label>
-            <input formControlName="estado" type="text" class="form-control" id="estado" required>
+<!-- ESTE ES EL SELECT-->
+<p>
+    <label>
+      <input formControlName="estado" name="estado" type="radio" value="Pendiente" checked />
+      <span>Pendiente</span>
+    </label>
+  </p>
 
-        </div>
+  <p>
+      <label>
+        <input formControlName="estado" name="estado" type="radio" value="Aceptado"/>
+        <span>Aceptado</span>
+      </label>
+    </p>
+
+  <p>
+    <label>
+      <input formControlName="estado" name="estado" type="radio" value="Rechazado"/>
+      <span>Rechazado</span>
+    </label>
+  </p>
+
+<!-- HASTA AQUÍ-->
         <div class="col-md-6">
             <label for="especie" class="form-label">Especie</label>
             <input formControlName="especie" type="text" class="form-control" id="especie" required>

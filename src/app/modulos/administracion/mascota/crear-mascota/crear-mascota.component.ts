@@ -12,8 +12,6 @@ declare const IniciarSelect:any;
 })
 export class CrearMascotaComponent implements OnInit {
 
-  estado_array:string[]=["Pendiente","Aceptada","Rechazada"];
-
   fgValidador: FormGroup = this.fb.group({    
     
     'nombre':['',[Validators.required]],
