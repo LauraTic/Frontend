@@ -13,6 +13,7 @@ import { EliminarPlanesComponent } from './planes/eliminar-planes/eliminar-plane
 import { BuscarProductoServicioComponent } from './producto-servicio/buscar-producto-servicio/buscar-producto-servicio.component';
 import { CrearProductoServicioComponent } from './producto-servicio/crear-producto-servicio/crear-producto-servicio.component';
 import { EditarProductoServicioComponent } from './producto-servicio/editar-producto-servicio/editar-producto-servicio.component';
+import { EliminarProductoServicioComponent } from './producto-servicio/eliminar-producto-servicio/eliminar-producto-servicio.component';
 import { CrearProspectoComponent } from './prospecto/crear-prospecto/crear-prospecto.component';
 import { BuscarUsuarioComponent } from './usuario/buscar-usuario/buscar-usuario.component';
 import { CrearUsuarioComponent } from './usuario/crear-usuario/crear-usuario.component';
@@ -59,6 +60,12 @@ const routes: Routes = [
     component:EditarMascotaComponent,
     canActivate: [ValidadorSesionGuard]
   },
+  {
+    path:"eliminar-mascota/:id",
+    component:EliminarMascotaComponent,
+    canActivate: [ValidadorSesionGuard]
+  },
+
 
   //EMPIEZA PRODUCTO SERVICIO
   {
@@ -74,6 +81,11 @@ const routes: Routes = [
   {
     path:"listar-producto-servicio",
     component: BuscarProductoServicioComponent,
+    canActivate: [ValidadorSesionGuard]
+  },
+  {
+    path:"eliminar-producto-servicio/:id",
+    component:EliminarProductoServicioComponent,
     canActivate: [ValidadorSesionGuard]
   },
 

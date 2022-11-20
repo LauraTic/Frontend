@@ -17,6 +17,9 @@
             <th>
                 Editar
             </th> 
+            <th>
+                Eliminar
+            </th>
         </tr>
                
     </thead>
@@ -36,6 +39,9 @@
             </td>  
             <td>
                 <a routerLink="/administracion/editar-producto-servicio/{{p.id}}" class="btn">Editar Producto</a>
+            </td>
+            <td>
+                <a routerLink="/administracion/eliminar-producto-servicio/{{p.id}}" class="btn">Eliminar producto</a>
             </td>
         </tr>
     </tbody>
