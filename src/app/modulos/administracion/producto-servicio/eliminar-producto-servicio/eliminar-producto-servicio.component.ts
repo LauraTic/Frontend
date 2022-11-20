@@ -34,7 +34,6 @@ export class EliminarProductoServicioComponent implements OnInit {
   }
 
   EliminiarProducto(){
-
     this.servicioProducto.EliminarProductos(this.id).subscribe((datos: any) => {
       alert("Producto eliminado correctamente chimba");
       this.router.navigate(["/administracion/listar-producto-servicio"]);

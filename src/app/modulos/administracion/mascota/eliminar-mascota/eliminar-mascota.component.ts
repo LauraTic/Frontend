@@ -34,8 +34,8 @@ export class EliminarMascotaComponent implements OnInit {
   }
 
   EliminarMascota(){
-    this.servicioMascota.ObtenerMascotasId(this.id).subscribe((datos: any) => {
-      alert("Plan eliminado correctamente chimba");
+    this.servicioMascota.EliminarMascota(this.id).subscribe((datos: any) => {
+      alert("Mascota eliminada correctamente chimba");
       this.router.navigate(["/administracion/listar-mascota"]);
     }, (error: any) => {
       alert("Error al eliminar")
