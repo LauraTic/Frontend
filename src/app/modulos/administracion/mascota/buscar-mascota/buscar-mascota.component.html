@@ -13,7 +13,10 @@
             </th>           
             <th>
                 Editar
-            </th> 
+            </th>
+            <th>
+                Eliminar
+            </th>  
         </tr>
                
     </thead>
@@ -30,6 +33,9 @@
             </td>             
             <td>
                 <a routerLink="/administracion/editar-mascota/{{p.id}}" class="btn">Editar </a>
+            </td>
+            <td>
+                <a routerLink="/administracion/eliminar-mascota/{{p.id}}" class="btn">Eliminar </a>
             </td>
         </tr>
     </tbody>

@@ -45,7 +45,7 @@ export class CrearMascotaComponent implements OnInit {
     
     this.servicioMascota.CrearMascotas(p).subscribe((datos: ModeloMascotas) => {
       alert("Usuario almacenado correctamente chimba");
-      this.router.navigate(["/administracion/listar-usuario"]);
+      this.router.navigate(["/administracion/listar-mascota"]);
     }, (error: any) => {
       alert("Error almacenado el usuario");
     })
