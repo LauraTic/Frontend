@@ -43,8 +43,7 @@ export class UsuarioService {
   }
   
   EliminarUsuario(id:string): Observable<any>{
-
-    return this.http.delete(`${this.url}/usuario/${id}`, {
+    return this.http.delete(`${this.url}/usuarios/${id}`, {
       headers: new HttpHeaders({
         'Authorization':`Bearer ${this.token}` 
       })

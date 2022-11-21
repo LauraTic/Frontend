@@ -1,1 +1,58 @@
-<p>crear-mascota works!</p>
+<div class="row">
+    <form [formGroup]="fgValidador" (ngSubmit)="GuardarMascota();" class="col s12" novalidate>
+        <div class="row">
+            <div class="input-field col s6">
+                <label for="nombre" class="form-label">Nombres</label>
+                <input formControlName="nombre" type="text" class="form-control" id="nombre" required>
+            </div>            
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                <label for="foto" class="form-label">Foto</label>
+                <input formControlName="foto" type="text" class="form-control" id="foto" required>
+            </div>           
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                <label for="especie" class="form-label">Especie</label>
+                <input formControlName="especie" type="text" class="form-control" id="especie" required>
+            </div>
+        </div>
+<!-- ESTE ES EL SELECT-->
+    <p>
+      <label>
+        <input formControlName="estado" name="estado" type="radio" value="Pendiente" checked />
+        <span>Pendiente</span>
+      </label>
+    </p>
+
+    <p>
+        <label>
+          <input formControlName="estado" name="estado" type="radio" value="Aceptado"/>
+          <span>Aceptado</span>
+        </label>
+      </p>
+
+    <p>
+      <label>
+        <input formControlName="estado" name="estado" type="radio" value="Rechazado"/>
+        <span>Rechazado</span>
+      </label>
+    </p>
+
+<!-- HASTA AQUÍ-->
+
+
+
+        <div class="row">
+            <div class="input-field col s12">
+                <label for="comentario" class="form-label">Comentario</label>
+                <input formControlName="comentario" type="text" class="form-control" id="comentario" required>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <button class="btn btn-primary" type="submit">Registrar</button>
+        </div>
+    </form>
+</div>
