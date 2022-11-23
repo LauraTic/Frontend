@@ -1,48 +1,51 @@
-<a routerLink="/administracion/crear-producto-servicio" class="btn">Nuevo Producto</a>
+<a routerLink="/administracion/crear-producto-servicio" class="btn"
+  >Nuevo Producto</a
+>
+<br/>
+<section>
+  <div class="header"></div>
+</section>
+<br/>
+
 <table id="tbl_producto" class="table responsive">
-    <thead>
-        <tr>
-            <th>
-                Nombre
-            </th>
-            <th>
-                Tipo
-            </th>
-            <th>
-                Descripcion
-            </th>
-            <th>
-                Precio
-            </th>
-            <th>
-                Editar
-            </th> 
-            <th>
-                Eliminar
-            </th>
-        </tr>
-               
-    </thead>
-    <tbody>
-        <tr *ngFor="let p of listadoRegistros">
-            <td>
-                {{p.nombre}}
-            </td>
-            <td>
-                {{p.tipo}}
-            </td> 
-            <td>
-                {{p.descripcion}}
-            </td> 
-            <td>
-                {{p.precio}}
-            </td>  
-            <td>
-                <a routerLink="/administracion/editar-producto-servicio/{{p.id}}" class="btn">Editar Producto</a>
-            </td>
-            <td>
-                <a routerLink="/administracion/eliminar-producto-servicio/{{p.id}}" class="btn">Eliminar producto</a>
-            </td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Tipo</th>
+      <th>Descripcion</th>
+      <th>Precio</th>
+      <th>Editar</th>
+      <th>Eliminar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of listadoRegistros">
+      <td>
+        {{ p.nombre }}
+      </td>
+      <td>
+        {{ p.tipo }}
+      </td>
+      <td>
+        {{ p.descripcion }}
+      </td>
+      <td>
+        {{ p.precio }}
+      </td>
+      <td>
+        <a
+          routerLink="/administracion/editar-producto-servicio/{{ p.id }}"
+          class="btn"
+          >Editar Producto</a
+        >
+      </td>
+      <td>
+        <a
+          routerLink="/administracion/eliminar-producto-servicio/{{ p.id }}"
+          class="btn"
+          >Eliminar producto</a
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>

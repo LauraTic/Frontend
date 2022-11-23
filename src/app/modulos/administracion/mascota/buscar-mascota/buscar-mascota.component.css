@@ -1,3 +1,16 @@
 .imagenMascota{
     width: 100px;
 }
+
+.header {
+    background-image:none /*linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))*/,
+      url("./../../../../../assets/img/slide3.png");
+    background-size: cover;
+    height: 300px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 40px;
+  }
