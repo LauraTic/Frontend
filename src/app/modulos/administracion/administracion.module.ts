@@ -30,6 +30,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProspectoComponent } from './prospecto/prospecto.component';
 import { CrearProspectoComponent } from './prospecto/crear-prospecto/crear-prospecto.component';
 import { BuscarProspectoComponent } from './prospecto/buscar-prospecto/buscar-prospecto.component';
+import { PruebaTblComponent } from './prueba-tbl/prueba-tbl.component';
 
 
 @NgModule({
@@ -61,7 +62,8 @@ import { BuscarProspectoComponent } from './prospecto/buscar-prospecto/buscar-pr
     BuscarUsuarioComponent,
     ProspectoComponent,
     CrearProspectoComponent,
-    BuscarProspectoComponent
+    BuscarProspectoComponent,
+    PruebaTblComponent
   ],
   imports: [
     CommonModule,
