@@ -1,13 +1,11 @@
-<a routerLink="/administracion/crear-producto-servicio" class="btn"
-  >Nuevo Producto</a
->
+<a routerLink="/administracion/crear-producto-servicio" class="btn">Nuevo Producto</a>
 <br/>
 <section>
   <div class="header"></div>
 </section>
 <br/>
 
-<table id="tbl_producto" class="table responsive">
+<table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" id="tbl_producto" class="table responsive">
   <thead>
     <tr>
       <th>Nombre</th>
