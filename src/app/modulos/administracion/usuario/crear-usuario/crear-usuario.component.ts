@@ -17,7 +17,7 @@ export class CrearUsuarioComponent implements OnInit {
     'apellido':['',[Validators.required]],
     'telefono':['',[Validators.required]],
     'correo':['',[Validators.required]],
-    'clave':['',[Validators.required]],
+    //'clave':['',[Validators.required]],
     'rol':['',[Validators.required]]
 
   });
@@ -35,7 +35,7 @@ export class CrearUsuarioComponent implements OnInit {
     let apellido = this.fgValidador.controls["apellido"].value;
     let telefono = this.fgValidador.controls["telefono"].value;
     let correo = this.fgValidador.controls["correo"].value;
-    let clave = this.fgValidador.controls["clave"].value;
+    //let clave = this.fgValidador.controls["clave"].value;
     let rol = this.fgValidador.controls["rol"].value;
 
     let p = new ModeloUsuario();
@@ -44,7 +44,7 @@ export class CrearUsuarioComponent implements OnInit {
     p.apellido = apellido;
     p.telefono = telefono;
     p.correo = correo;
-    p.clave = clave;
+    //p.clave = clave;
     p.rol = rol;
     
     this.servicioUsuario.CrearUsuario(p).subscribe((datos: ModeloUsuario) => {
