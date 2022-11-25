@@ -19,7 +19,6 @@ import { BuscarUsuarioComponent } from './usuario/buscar-usuario/buscar-usuario.
 import { CrearUsuarioComponent } from './usuario/crear-usuario/crear-usuario.component';
 import { EditarUsuarioComponent } from './usuario/editar-usuario/editar-usuario.component';
 import { EliminarUsuarioComponent } from './usuario/eliminar-usuario/eliminar-usuario.component';
-import { ZeroConfigComponentComponent } from './zero-config-component/zero-config-component.component';
 
 const routes: Routes = [
 
@@ -115,13 +114,7 @@ const routes: Routes = [
   {
     path:"crear-prospecto",
     component:CrearProspectoComponent
-  },
-  {
-    path:"prueba",
-    component:ZeroConfigComponentComponent
-  },
-
-
+  }
 
 ];
 
